@@ -176,11 +176,17 @@ function countDown(chooseCountDown) {
 };
 countDown(5)
 
+let input = 2
+const totalCount = []
+for (i = input; i >= 0; i--) {
+    totalCount.push(i)
+}
+var thisNumber = totalCount.map((thisNumber, index, totalCount) => {
+    setTimeout(function() {
+        console.log(thisNumber || "Lift-off!");
+    }, (+input- thisNumber) * 1000)
+})      
 
 
-
-
-
-//want to be able to declare i in the function, but want to check it first, make sure it's a number, and that it's positive, and an integer etc
 
 
